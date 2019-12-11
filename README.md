@@ -30,3 +30,5 @@ mount_uploader :name, ImagesUploader
 * 画像のプレビューを表示させた状態で、保存する。
 
 ## 参考記事
+* fields_forを用いた画像のアップロード https://qiita.com/kouuuki/items/5daf2b5f34273d8457f7
+
