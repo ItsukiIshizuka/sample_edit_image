@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## gem list
+* pry-rails
+* jquery-rail https://github.com/rails/jquery-rails
+* haml-rails https://github.com/haml/haml-rails
 
-Things you may want to cover:
+## 構築手順
+* productテーブル作成(name:string)
+* imageテーブル作成(name:string, product_id:外部キー)
+* 親 productモデル 子 imageモデル で構築
 
-* Ruby version
+## What
+* fields_forを用いた画像複数モデルへの登録
+* 画像のプレビュー表示
 
-* System dependencies
+## Why
+* 画像のプレビューを表示させた状態で、保存する。
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 参考記事
