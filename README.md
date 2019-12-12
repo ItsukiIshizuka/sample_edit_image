@@ -29,4 +29,5 @@ mount_uploader :image, ImagesUploader
 * メルカリ画像編集機能の細分化
 
 ## 参考記事
-* 
+* actionごとに条件分岐 https://qiita.com/tsuchinoko_run/items/350419d5cd3acf10c1e6
+*
