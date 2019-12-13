@@ -14,10 +14,9 @@
     - unless image.object.image.blank?
       = image_tag image.object.image.to_s, height:'100', width: '100'
       = image.hidden_field :id, value: image.object.id
-      = image.file_field :image
-    -else
+      = image.hidden_field :_destroy, value: ""
+    - else
       = image.file_field :image
 
   .action
     = f.submit
-  

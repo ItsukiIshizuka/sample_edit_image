@@ -1,15 +1,6 @@
 class Product < ApplicationRecord
   has_many :images, dependent: :destroy
-  accepts_nested_attributes_for :images, reject_if: :reject_both_blank, allow_destroy: true
-
-  def reject_both_blank(attributes)
-    binding.pry
-    if attributes[:id] # paramsのattributes[:id]があれば
-      attributes.merge!(_destroy: "1") if attributes[:image].blank? # 
-      !attributes[:image].blank?
-    else
-      attributes[:image].blank?
-    end
-  end
-
+  accepts_nested_attributes_for :images, allow_destroy: true # allow_destroy を設定すると params[:_destroy] = 1 だったら要素を削除する
+  validates :images, presence: true
+  validates :name, presence: true
 end

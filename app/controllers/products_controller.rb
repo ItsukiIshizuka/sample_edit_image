@@ -20,14 +20,12 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-    @product.images.build
   end
 
   # POST /products
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -74,6 +72,7 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, images_attributes: [:image, :id])
     end
+
     def update_product_params
       params.require(:product).permit(:name, images_attributes: [:image, :id, :_destroy])
     end
