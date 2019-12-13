@@ -25,11 +25,11 @@ mount_uploader :image, ImagesUploader
 ## What
 1. fields_forを用いた画像の編集
     1. Edit画面表示時に、productに紐づいたimage(画像)を表示
-    1. Edit画面に表示されたimageの変更
-1. fields_forを用いた画像の削除
+    2. Edit画面に表示されたimageの変更
+2. fields_forを用いた画像の削除
     1. オプション "allow_destroy"を付与
-    1. params[:_destroy]をinputにhiddenで持たせる
-    1. [:_destroy]の値が"1"になっていたら、データ送信時に該当データを削除
+    2. params[:_destroy]をinputにhiddenで持たせる
+    3. [:_destroy]の値が"1"になっていたら、データ送信時に該当データを削除
 
 
 ## Why
