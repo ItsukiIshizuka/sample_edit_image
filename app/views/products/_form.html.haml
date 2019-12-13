@@ -15,8 +15,9 @@
       = image_tag image.object.image.to_s, height:'100', width: '100'
       = image.hidden_field :id, value: image.object.id
       = image.hidden_field :_destroy, value: ""
-    - else
-      = image.file_field :image
+    = image.file_field :image
+    -# - else
+    -#   = image.file_field :image
 
   .action
     = f.submit
